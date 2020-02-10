@@ -5,6 +5,12 @@
     .hero {
         padding: .5rem;
         border-radius: 5px;
+        cursor: pointer;
+        transition: all ease-in-out .3s;
+        &:hover:not(.selected) {
+            background-color: lightgrey;
+        }
+        margin: .3rem .5rem;
     }
 
     .badge {

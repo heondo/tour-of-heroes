@@ -4,11 +4,10 @@
 <div class="heroes" *ngIf="heroes">
     <div 
         class="hero" 
-        [class.selected]="hero === selectedHero"
         *ngFor="let hero of heroes" 
-        (click)="onSelect(hero)"
     >
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
     </div>
 </div>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
